@@ -19,20 +19,17 @@ class App extends React.Component {
     return(
       <>
         <Router>
-          {/* <IsLoadingAndError> */}
           <Header />
             <Switch>
               <Route exact path="/">
                 {/* TODO: if the user is logged in, render the `BestBooks` component, if they are not, render the `Login` component */}
-                { isAuthenticated ? <BestBooks/>  :<Login/> }
+                { isAuthenticated ? <BestBooks/> :<Login/> }
               </Route>
               <Route exact path="/profile">
-            
               <Profile/>
               </Route>
             </Switch>
             <Footer />
-          {/* </IsLoadingAndError> */}
         </Router>
       </>
     );
